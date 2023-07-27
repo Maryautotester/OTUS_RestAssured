@@ -9,10 +9,9 @@ import lombok.RequiredArgsConstructor;
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
-
-public class GetUserResponseDTO {
-    private Long code;
-    private String type;
-    private String message;
+public class GetUserResponseFull {
+    private Long id;
+    private String password;
+    private String username;
+    private Long userStatus;
 }
-

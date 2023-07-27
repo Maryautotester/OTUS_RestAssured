@@ -6,6 +6,8 @@
         <list>
           <option value="io.rest-assured:rest-assured" />
           <option value="io.rest-assured:json-schema-validator" />
+          <option value="io.rest-assured:json-path" />
+          <option value="org.junit.jupiter:junit-jupiter-engine" />
         </list>
       </option>
     </inspection_tool>

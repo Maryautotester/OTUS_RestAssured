@@ -10,8 +10,7 @@ public class CreateUserApi {
 
     private static final String BASE_URI = "https://petstore.swagger.io/v2";
     private static final String BASE_PATH = "/user";
-    private RequestSpecification spec;
-    private RequestSpecification spec_get;
+    private final RequestSpecification spec;
     public CreateUserApi(){
         spec = given()
                 .baseUri(BASE_URI)
