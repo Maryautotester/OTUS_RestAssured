@@ -1,4 +1,4 @@
-package petshop;
+package petshop.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;

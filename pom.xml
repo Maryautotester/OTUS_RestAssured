@@ -16,6 +16,8 @@
         <checkstyle.version>3.1.0</checkstyle.version>
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
+
+        <baseUri>"https://petstore.swagger.io/v2"</baseUri>
     </properties>
     <dependencies>
         <dependency>
@@ -38,11 +40,6 @@
             <!--<scope>test</scope> -->
         </dependency>
         <dependency>
-            <groupId>com.github.spotbugs</groupId>
-            <artifactId>spotbugs-maven-plugin</artifactId>
-            <version>4.7.3.5</version>
-        </dependency>
-        <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>json-schema-validator</artifactId>
             <version>5.3.1</version>
@@ -59,8 +56,6 @@
             <version>1.18.26</version>
             <scope>provided</scope>
         </dependency>
-
-
     </dependencies>
 <build>
     <plugins>
@@ -74,7 +69,6 @@
             <artifactId>spotbugs-maven-plugin</artifactId>
             <version>4.7.3.5</version>
         </plugin>
-
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-checkstyle-plugin</artifactId>
@@ -95,5 +89,4 @@
         </plugin>
     </plugins>
     </build>
-
 </project>

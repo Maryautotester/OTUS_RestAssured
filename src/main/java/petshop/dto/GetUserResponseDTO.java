@@ -1,4 +1,4 @@
-package petshop;
+package petshop.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,9 +9,10 @@ import lombok.RequiredArgsConstructor;
 @Builder
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class GetUserResponseFull {
-    private Long id;
-    private String password;
-    private String username;
-    private Long userStatus;
+
+public class GetUserResponseDTO {
+    private Long code;
+    private String type;
+    private String message;
 }
+

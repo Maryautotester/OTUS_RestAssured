@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbaeb64f-673e-4f91-bd06-ef11225ec08a" name="Changes" comment="Updated">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/checkstyle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/petshop/spec/RegSpecification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/petshop/spec/ResSpecification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/petshop/user/NegativeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/petshop/user/PositiveTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/CreateUserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/CreateUserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/GetUserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/GetUserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/GetUserResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/GetUserResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/GetUserResponseFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/GetUserResponseFull.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PetShop/PetStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/petshop/PetStoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petshop/CreateUserApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petshop/GetUserApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petshop/GetUserResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/dto/GetUserResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petshop/GetUserResponseFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/dto/GetUserResponseFullDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petshop/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/dto/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/petshop/PetStoreTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,13 +63,17 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="PetShop" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="petshop.spec" />
+      <recent name="petshop.dto" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn --version" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PetStoreTest">
+  <component name="RunManager" selected="JUnit.CCPetStoreTest">
     <configuration name="All in RestAssured" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssured" />
       <option name="PACKAGE_NAME" value="" />
@@ -74,63 +82,63 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetStoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CCPetStore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="petshop.*" />
+          <option name="PATTERN" value="petshop.dto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="PetShop" />
-      <option name="MAIN_CLASS_NAME" value="petshop.PetStoreTest" />
+      <option name="PACKAGE_NAME" value="petshop" />
+      <option name="MAIN_CLASS_NAME" value="petshop.CCPetStore" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetStoreTest.getUserByName_DefaultUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CCPetStore.getUserByName_DefaultUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="petshop.*" />
+          <option name="PATTERN" value="petshop.dto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="PetShop" />
-      <option name="MAIN_CLASS_NAME" value="petshop.PetStoreTest" />
+      <option name="PACKAGE_NAME" value="petshop" />
+      <option name="MAIN_CLASS_NAME" value="petshop.CCPetStore" />
       <option name="METHOD_NAME" value="getUserByName_DefaultUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetStoreTest.getUserByName_InvalidUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CCPetStore.getUserByName_InvalidUserName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="petshop.*" />
+          <option name="PATTERN" value="petshop.dto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="PetShop" />
-      <option name="MAIN_CLASS_NAME" value="petshop.PetStoreTest" />
+      <option name="PACKAGE_NAME" value="petshop" />
+      <option name="MAIN_CLASS_NAME" value="petshop.CCPetStore" />
       <option name="METHOD_NAME" value="getUserByName_InvalidUserName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PetStoreTest.getUserByName_User1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CCPetStore.getUserByName_User1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="petshop.*" />
+          <option name="PATTERN" value="petshop.dto.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="PetShop" />
-      <option name="MAIN_CLASS_NAME" value="petshop.PetStoreTest" />
+      <option name="PACKAGE_NAME" value="petshop" />
+      <option name="MAIN_CLASS_NAME" value="petshop.CCPetStore" />
       <option name="METHOD_NAME" value="getUserByName_User1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -164,10 +172,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PetStoreTest.getUserByName_DefaultUser" />
-        <item itemvalue="JUnit.PetStoreTest" />
-        <item itemvalue="JUnit.PetStoreTest.getUserByName_InvalidUserName" />
-        <item itemvalue="JUnit.PetStoreTest.getUserByName_User1" />
+        <item itemvalue="JUnit.CCPetStore.getUserByName_DefaultUser" />
+        <item itemvalue="JUnit.CCPetStoreTest" />
+        <item itemvalue="JUnit.CCPetStore.getUserByName_InvalidUserName" />
+        <item itemvalue="JUnit.CCPetStore.getUserByName_User1" />
         <item itemvalue="JUnit.All in RestAssured" />
       </list>
     </recent_temporary>
@@ -188,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690478199539</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated">
+      <created>1690550483014</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690550483014</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
