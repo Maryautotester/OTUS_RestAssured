@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dbaeb64f-673e-4f91-bd06-ef11225ec08a" name="Changes" comment="Updated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/PetShop/GetUserResponseFull.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PetShop/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/checkstyle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/CreateUserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PetShop/CreateUserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/GetUserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PetShop/GetUserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/GetUserResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PetShop/GetUserResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PetShop/PetStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PetShop/PetStoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/CreateUserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/CreateUserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/GetUserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/GetUserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/GetUserResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/GetUserResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/GetUserResponseFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/GetUserResponseFull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PetShop/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PetShop/PetStoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/petshop/PetStoreTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/test/IdeaProjects/otus_ui_1",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -77,12 +78,12 @@
       <module name="RestAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="PetShop.*" />
+          <option name="PATTERN" value="petshop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="PetShop" />
-      <option name="MAIN_CLASS_NAME" value="PetShop.PetStoreTest" />
+      <option name="MAIN_CLASS_NAME" value="petshop.PetStoreTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -92,12 +93,12 @@
       <module name="RestAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="PetShop.*" />
+          <option name="PATTERN" value="petshop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="PetShop" />
-      <option name="MAIN_CLASS_NAME" value="PetShop.PetStoreTest" />
+      <option name="MAIN_CLASS_NAME" value="petshop.PetStoreTest" />
       <option name="METHOD_NAME" value="getUserByName_DefaultUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -108,12 +109,12 @@
       <module name="RestAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="PetShop.*" />
+          <option name="PATTERN" value="petshop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="PetShop" />
-      <option name="MAIN_CLASS_NAME" value="PetShop.PetStoreTest" />
+      <option name="MAIN_CLASS_NAME" value="petshop.PetStoreTest" />
       <option name="METHOD_NAME" value="getUserByName_InvalidUserName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -124,12 +125,12 @@
       <module name="RestAssured" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="PetShop.*" />
+          <option name="PATTERN" value="petshop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="PetShop" />
-      <option name="MAIN_CLASS_NAME" value="PetShop.PetStoreTest" />
+      <option name="MAIN_CLASS_NAME" value="petshop.PetStoreTest" />
       <option name="METHOD_NAME" value="getUserByName_User1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -180,6 +181,14 @@
       <option name="presentableId" value="Default" />
       <updated>1690371429851</updated>
     </task>
+    <task id="LOCAL-00001" summary="Updated">
+      <created>1690478199539</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1690478199539</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

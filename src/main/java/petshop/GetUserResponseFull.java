@@ -1,4 +1,4 @@
-package PetShop;
+package petshop;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

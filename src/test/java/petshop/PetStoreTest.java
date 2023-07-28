@@ -1,9 +1,9 @@
-package PetShop;
+package petshop;
+
+import static org.hamcrest.Matchers.equalTo;
 
 import io.restassured.response.ValidatableResponse;
 import org.junit.jupiter.api.*;
-
-import static org.hamcrest.Matchers.equalTo;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class PetStoreTest {
@@ -15,8 +15,8 @@ public class PetStoreTest {
     @Order(1)
     @Test
     public void createUserAllArgs() {
-        CreateUserApi createUserApiApi = new CreateUserApi();
 
+        CreateUserApi createUserApi = new CreateUserApi();
         UserDTO userDTO = UserDTO.builder()
                 .id(12345L)
                 .username("BestUser")
@@ -27,7 +27,7 @@ public class PetStoreTest {
                 .password("Ivan12345")
                 .userStatus(123L)
                 .build();
-        createUserApiApi.createUser(userDTO)
+        createUserApi.createUser(userDTO)
                 .statusCode(200)
                 .body("code", equalTo(200))
                 .body("type", equalTo("unknown"))
@@ -43,7 +43,6 @@ public class PetStoreTest {
     @Test
     public void createUserDefaultArgs() {
         CreateUserApi createUserApi = new CreateUserApi();
-
         UserDTO userDTO = UserDTO.builder()
                 .id(12346L)
                 .username("DefaultUser")
@@ -74,13 +73,13 @@ public class PetStoreTest {
     public void getUserByName_DefaultUser() {
         GetUserApi getUserApi = new GetUserApi("DefaultUser");
         ValidatableResponse response = getUserApi.getUser();
-        GetUserResponseFull GetUser = response.extract().body().as(GetUserResponseFull.class);
+        GetUserResponseFull getUser = response.extract().body().as(GetUserResponseFull.class);
 
         response.statusCode(200);
-        Assertions.assertEquals(12346L, GetUser.getId(), "Incorrect UserId");
-        Assertions.assertEquals("DefaultUser", GetUser.getUsername(), "Incorrect UserName");
-        Assertions.assertEquals("Def123", GetUser.getPassword(), "Incorrect Password");
-        Assertions.assertEquals(0L, GetUser.getUserStatus(), "Incorrect  UserStatus");
+        Assertions.assertEquals(12346L, getUser.getId(), "Incorrect UserId");
+        Assertions.assertEquals("DefaultUser", getUser.getUsername(), "Incorrect UserName");
+        Assertions.assertEquals("Def123", getUser.getPassword(), "Incorrect Password");
+        Assertions.assertEquals(0L, getUser.getUserStatus(), "Incorrect  UserStatus");
 
 
     }
@@ -94,12 +93,12 @@ public class PetStoreTest {
     public void getUserByName_User1() {
         GetUserApi getUserApi = new GetUserApi("user101");
         ValidatableResponse response = getUserApi.getUser();
-        GetUserResponseDTO GetUser = response.extract().body().as(GetUserResponseDTO.class);
+        GetUserResponseDTO getUser = response.extract().body().as(GetUserResponseDTO.class);
 
         response.statusCode(404).statusLine("HTTP/1.1 404 Not Found");
-        Assertions.assertEquals(1, GetUser.getCode(), "code is not 1");
-        Assertions.assertEquals("error", GetUser.getType(), "type is not error");
-        Assertions.assertEquals("User not found", GetUser.getMessage(), "message is not error");
+        Assertions.assertEquals(1, getUser.getCode(), "code is not 1");
+        Assertions.assertEquals("error", getUser.getType(), "type is not error");
+        Assertions.assertEquals("User not found", getUser.getMessage(), "message is not error");
     }
     /*
     Test check this endpoint couldn't be used with POST method.

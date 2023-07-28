@@ -1,34 +1,28 @@
-package PetShop;
+package petshop;
+
+import static io.restassured.RestAssured.given;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
-import static io.restassured.RestAssured.given;
-
-public class GetUserApi {
-
+public class CreateUserApi {
     private static final String BASE_URI = "https://petstore.swagger.io/v2";
-    private static final String BASE_PATH = "/user/";
-
+    private static final String BASE_PATH = "/user";
     private final RequestSpecification spec;
-    public GetUserApi(String userName){
+    public CreateUserApi(){
         spec = given()
                 .baseUri(BASE_URI)
-                .basePath(BASE_PATH + userName)
+                .basePath(BASE_PATH)
                 .contentType(ContentType.JSON)
                 .log().all();
     }
-    public ValidatableResponse getUser(){
+    public ValidatableResponse createUser(UserDTO userDTO){
         return  given(spec)
-                .when()
-                .get()
-                .then().log().all();
-    }
-    public ValidatableResponse getUserInvalid(){
-        return  given(spec)
+                .body(userDTO)
                 .when()
                     .post()
                 .then().log().all();
     }
+
 }
