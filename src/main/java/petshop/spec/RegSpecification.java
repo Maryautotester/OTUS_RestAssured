@@ -6,7 +6,7 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 public class RegSpecification {
-    private static final String BASE_URI = "https://petstore.swagger.io/v2";
+    private static String BASE_URI = System.getProperty("baseUri");
     private static String BASE_PATH = "/user";
 
     public static RequestSpecification requestSpec_Create = given()

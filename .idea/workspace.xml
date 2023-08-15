@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbaeb64f-673e-4f91-bd06-ef11225ec08a" name="Changes" comment="Updated">
-      <change afterPath="$PROJECT_DIR$/src/main/java/petshop/spec/RegSpecification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/petshop/spec/ResSpecification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/petshop/user/NegativeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/petshop/user/PositiveTest.java" afterDir="false" />
+    <list default="true" id="dbaeb64f-673e-4f91-bd06-ef11225ec08a" name="Changes" comment="Corrections according to remarks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/petshop/CreateUserApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/petshop/GetUserApi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/petshop/GetUserResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/dto/GetUserResponseDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/petshop/GetUserResponseFull.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/dto/GetUserResponseFullDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/petshop/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/petshop/PetStoreTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/petshop/spec/RegSpecification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/petshop/spec/RegSpecification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/petshop/user/PositiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/petshop/user/PositiveTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +43,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/test/IdeaProjects/otus_ui_1",
+    "last_opened_file_path": "C:/Users/test/IdeaProjects/RestAssured",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings"
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -73,26 +64,11 @@
       <command value="mvn --version" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CCPetStoreTest">
+  <component name="RunManager" selected="Maven.RestAssured [test]">
     <configuration name="All in RestAssured" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RestAssured" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CCPetStore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RestAssured" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="petshop.dto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="petshop" />
-      <option name="MAIN_CLASS_NAME" value="petshop.CCPetStore" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,6 +121,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PositiveTest.createUserAllArgs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="petshop.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="petshop.user" />
+      <option name="MAIN_CLASS_NAME" value="petshop.user.PositiveTest" />
+      <option name="METHOD_NAME" value="createUserAllArgs" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RestAssured [test]" type="MavenRunConfiguration" factoryName="Maven" activateToolWindowBeforeRun="false">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -156,7 +148,9 @@
             </option>
             <option name="goals">
               <list>
+                <option value="clean" />
                 <option value="test" />
+                <option value="--debug" />
               </list>
             </option>
             <option name="pomFileName" value="pom.xml" />
@@ -170,10 +164,18 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JUnit.All in RestAssured" />
+      <item itemvalue="JUnit.CCPetStore.getUserByName_DefaultUser" />
+      <item itemvalue="JUnit.CCPetStore.getUserByName_InvalidUserName" />
+      <item itemvalue="JUnit.CCPetStore.getUserByName_User1" />
+      <item itemvalue="JUnit.PositiveTest.createUserAllArgs" />
+      <item itemvalue="Maven.RestAssured [test]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PositiveTest.createUserAllArgs" />
         <item itemvalue="JUnit.CCPetStore.getUserByName_DefaultUser" />
-        <item itemvalue="JUnit.CCPetStoreTest" />
         <item itemvalue="JUnit.CCPetStore.getUserByName_InvalidUserName" />
         <item itemvalue="JUnit.CCPetStore.getUserByName_User1" />
         <item itemvalue="JUnit.All in RestAssured" />
@@ -203,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690550483014</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Corrections according to remarks">
+      <created>1690568333385</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690568333385</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,7 +258,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
+    <MESSAGE value="Corrections according to remarks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrections according to remarks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -258,6 +268,12 @@
           <properties class="java.lang.ClassNotFoundException" package="java.lang" />
           <option name="timeStamp" value="3" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/petshop/spec/RegSpecification.java</url>
+          <line>8</line>
+          <properties field="BASE_URI" class="petshop.spec.RegSpecification" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
