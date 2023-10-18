@@ -4,6 +4,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 import io.restassured.response.ValidatableResponse;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import petshop.dto.GetUserResponseFullDTO;
 import petshop.dto.UserDTO;
@@ -21,6 +22,7 @@ public class PositiveTest {
     All fields are correct.
      */
     @Test
+    @DisplayName("Проверить, что юзер со всеми параметрами успешно создается")
     public void createUserAllArgs() {
         ResSpecification resspec = new ResSpecification();
         UserDTO userDTO = UserDTO.builder()
@@ -65,6 +67,7 @@ public class PositiveTest {
     id, UserName, password, UserStatus are correct.
      */
     @Test
+    @DisplayName("Проверить, что юзер с параметрами по умолчанию создается")
     public void createUserDefaultArgs() {
         ResSpecification resspec = new ResSpecification();
         UserDTO userDTO = UserDTO.builder()

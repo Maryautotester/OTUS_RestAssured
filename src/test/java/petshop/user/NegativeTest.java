@@ -2,6 +2,7 @@ package petshop.user;
 
 import io.restassured.response.ValidatableResponse;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import petshop.dto.GetUserResponseDTO;
 import petshop.spec.RegSpecification;
@@ -14,6 +15,7 @@ public class NegativeTest {
     code 1, type is error, message is User not found.
      */
     @Test
+    @DisplayName("Проверить наличие ошибки \"User not found\" для user101")
     public void getUserByName_User1() {
         RegSpecification reqspec = new RegSpecification();
         reqspec.regSpecificationGet("user101");
@@ -29,6 +31,7 @@ public class NegativeTest {
     Test check this endpoint couldn't be used with POST method.
      */
     @Test
+    @DisplayName("Проверить, что endpoint /user/{username} не используется с методом POST")
     public void getUserByName_InvalidUserName() {
         RegSpecification reqspec = new RegSpecification();
         reqspec.regSpecificationGet("123");
