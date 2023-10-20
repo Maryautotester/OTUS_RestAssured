@@ -11,6 +11,8 @@ timeout(30) {
                 if (tests_exit_code != 0) {
                     currentBuild.result = 'SUCCESS'
                 }
+                allure includeProperties: false, jdk: '', results: [[path: 'target/allure-results']]
+
             }
             stage('Publish artifacts') {
                 allure([
@@ -20,7 +22,8 @@ timeout(30) {
                         reportBuildPolicy: 'ALWAYS',
                         results: [[path: 'target/allure-results']]
                 ])
-            }
+
+                            }
         }
     }
 }
