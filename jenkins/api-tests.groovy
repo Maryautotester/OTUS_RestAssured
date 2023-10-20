@@ -1,4 +1,4 @@
-timeout(180) {
+timeout(30) {
     node('maven') {
         timestamps {
             stage('Checkout') {

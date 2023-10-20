@@ -18,7 +18,7 @@ public class NegativeTest {
     @DisplayName("Проверить наличие ошибки \"User not found\" для user101")
     public void getUserByName_User1() {
         RegSpecification reqspec = new RegSpecification();
-        reqspec.regSpecificationGet("user101");
+        reqspec.regSpecificationGet("user901");
         ValidatableResponse response = new ResSpecification().getUser();
         GetUserResponseDTO getUser = response.extract().body().as(GetUserResponseDTO.class);
 
