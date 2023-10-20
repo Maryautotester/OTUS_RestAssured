@@ -14,6 +14,7 @@ timeout(30) {
 
             }
             stage('Publish artifacts') {
+                sh "ls -la ./target"
                 allure([
                         includeProperties: false,
                         jdk: '',
