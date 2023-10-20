@@ -9,13 +9,14 @@ timeout(30) {
                         script: "mvn test -DbaseUrl=$BASE_URL",
                 )
                 if (tests_exit_code != 0) {
-                    currentBuild.result = 'SUCCESS'
+                    currentBuild.result = 'UNSTABLE'
                 }
 
             }
             stage('Publish artifacts') {
                 sh "ls -la ./target"
                 sh "ls -la ."
+                sh "echo BASE_URL=$BASE_URL > ./allure-results/environment.properties" 
                 allure([
                         includeProperties: false,
                         jdk: '',
