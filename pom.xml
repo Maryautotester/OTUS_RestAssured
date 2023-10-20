@@ -90,7 +90,6 @@
                     <baseUri>${baseUri}</baseUri>
                     <name>junit.jupiter.extensions.autodetection.enabled</name>
                     <value>true</value>
-                    <allure.results.directory>../target/allure-results</allure.results.directory>
                 </systemPropertyVariables>
             </configuration>
             <dependencies>
