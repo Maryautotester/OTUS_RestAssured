@@ -23,7 +23,7 @@ public class NegativeTest {
         GetUserResponseDTO getUser = response.extract().body().as(GetUserResponseDTO.class);
 
 
-//        response.statusCode(404).statusLine("HTTP/1.1 404 Not Found");
+        //        response.statusCode(404).statusLine("HTTP/1.1 404 Not Found");
         Assert.assertStatusCode(response, 404, "HTTP/1.1 404 Not Found");
         Assert.assertError(getUser, 1, "error", "User not found");
     }
@@ -36,6 +36,6 @@ public class NegativeTest {
         RegSpecification reqspec = new RegSpecification();
         reqspec.regSpecificationGet("123");
         Assert.assertStatusCode(new ResSpecification().getUserInvalid(), 405, "HTTP/1.1 405 Method Not Allowed");
-//        new ResSpecification().getUserInvalid().statusCode(405).statusLine("HTTP/1.1 405 Method Not Allowed");
+        //        new ResSpecification().getUserInvalid().statusCode(405).statusLine("HTTP/1.1 405 Method Not Allowed");
     }
 }
