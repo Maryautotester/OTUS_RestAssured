@@ -2,8 +2,8 @@ package petshop.user;
 
 import static org.hamcrest.Matchers.equalTo;
 
+import assertation.Assert;
 import io.restassured.response.ValidatableResponse;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import petshop.dto.GetUserResponseFullDTO;
@@ -25,7 +25,7 @@ public class PositiveTest {
     @DisplayName("Проверить, что юзер со всеми параметрами успешно создается")
     public void createUserAllArgs() {
         ResSpecification resspec = new ResSpecification();
-        UserDTO userDTO = UserDTO.builder()
+        UserDTO userdto = UserDTO.builder()
                 .id(12345L)
                 .username("BestUser")
                 .firstName("Ivan")
@@ -35,7 +35,7 @@ public class PositiveTest {
                 .password("Ivan12345")
                 .userStatus(123L)
                 .build();
-        resspec.createUser(userDTO)
+        resspec.createUser(userdto)
                 .statusCode(200)
                 .body("code", equalTo(200))
                 .body("type", equalTo("unknown"))
@@ -44,17 +44,12 @@ public class PositiveTest {
         RegSpecification reqspec = new RegSpecification();
         reqspec.regSpecificationGet("BestUser");
         ValidatableResponse response = new ResSpecification().getUser();
-        UserDTO userdto = response.extract().body().as(UserDTO.class);
+        UserDTO userDTO = response.extract().body().as(UserDTO.class);
 
         response.statusCode(200);
-        Assertions.assertEquals(12345L, userdto.getId(), "Incorrect UserId");
-        Assertions.assertEquals("BestUser", userdto.getUsername(), "Incorrect UserName");
-        Assertions.assertEquals("Ivan", userdto.getFirstName(), "Incorrect first name");
-        Assertions.assertEquals("Egorov", userdto.getLastName(), "Incorrect last name");
-        Assertions.assertEquals("IEgorov@w.ru", userdto.getEmail(), "Incorrect email");
-        Assertions.assertEquals("123 45 67", userdto.getPhone(), "Incorrect phone");
-        Assertions.assertEquals("Ivan12345", userdto.getPassword(), "Incorrect Password");
-        Assertions.assertEquals(123L, userdto.getUserStatus(), "Incorrect  UserStatus");
+
+        Assert.assertUserRes(userDTO, 12345L, "BestUser", "Ivan", "Egorov",
+                "IEgorov@w.ru", "123 45 67", "Ivan12345", 123L);
     }
 
     /*
@@ -75,14 +70,9 @@ public class PositiveTest {
                 .username("DefaultUser")
                 .password("Def123")
                 .build();
-        Assertions.assertEquals(12346, userDTO.getId(), "Incorrect ID");
-        Assertions.assertEquals("DefaultUser", userDTO.getUsername(), "Incorrect Username");
-        Assertions.assertNull(userDTO.getFirstName(), "FirstName is not null");
-        Assertions.assertNull(userDTO.getLastName(), "LastName is not null");
-        Assertions.assertNull(userDTO.getEmail(), "Email is not null");
-        Assertions.assertEquals("Def123", userDTO.getPassword(), "Incorrect Password");
-        Assertions.assertNull(userDTO.getPhone(), "Phone is not null");
-        Assertions.assertNull(userDTO.getUserStatus(), "UserStatus is not null");
+
+        Assert.assertUserRes(userDTO, 12346L, "DefaultUser", null, null,
+                null, null, "Def123", null);
 
         resspec.createUser(userDTO)
                 .statusCode(200)
@@ -96,9 +86,7 @@ public class PositiveTest {
         GetUserResponseFullDTO getUser = response.extract().body().as(GetUserResponseFullDTO.class);
 
         response.statusCode(200);
-        Assertions.assertEquals(12346L, getUser.getId(), "Incorrect UserId");
-        Assertions.assertEquals("DefaultUser", getUser.getUsername(), "Incorrect UserName");
-        Assertions.assertEquals("Def123", getUser.getPassword(), "Incorrect Password");
-        Assertions.assertEquals(0L, getUser.getUserStatus(), "Incorrect  UserStatus");
+        Assert.assertGetUserRes(getUser, 12346L,"DefaultUser", "Def123", 0L);
+
     }
 }

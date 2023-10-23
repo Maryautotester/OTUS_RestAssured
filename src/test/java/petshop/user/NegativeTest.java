@@ -1,7 +1,7 @@
 package petshop.user;
 
+import assertation.Assert;
 import io.restassured.response.ValidatableResponse;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import petshop.dto.GetUserResponseDTO;
@@ -22,10 +22,10 @@ public class NegativeTest {
         ValidatableResponse response = new ResSpecification().getUser();
         GetUserResponseDTO getUser = response.extract().body().as(GetUserResponseDTO.class);
 
-        response.statusCode(404).statusLine("HTTP/1.1 404 Not Found");
-        Assertions.assertEquals(1, getUser.getCode(), "code is not 1");
-        Assertions.assertEquals("error", getUser.getType(), "type is not error");
-        Assertions.assertEquals("User not found", getUser.getMessage(), "message is not error");
+
+//        response.statusCode(404).statusLine("HTTP/1.1 404 Not Found");
+        Assert.assertStatusCode(response, 404, "HTTP/1.1 404 Not Found");
+        Assert.assertError(getUser, 1, "error", "User not found");
     }
     /*
     Test check this endpoint couldn't be used with POST method.
@@ -35,6 +35,7 @@ public class NegativeTest {
     public void getUserByName_InvalidUserName() {
         RegSpecification reqspec = new RegSpecification();
         reqspec.regSpecificationGet("123");
-        new ResSpecification().getUserInvalid().statusCode(405).statusLine("HTTP/1.1 405 Method Not Allowed");
+        Assert.assertStatusCode(new ResSpecification().getUserInvalid(), 405, "HTTP/1.1 405 Method Not Allowed");
+//        new ResSpecification().getUserInvalid().statusCode(405).statusLine("HTTP/1.1 405 Method Not Allowed");
     }
 }
