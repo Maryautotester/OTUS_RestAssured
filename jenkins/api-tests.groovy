@@ -8,6 +8,7 @@ timeout(30) {
                 tests_exit_code = sh(
                         script: "mvn test -DbaseUrl=$BASE_URL",
                 )
+                sh "echo tests_exit_code=$tests_exit_code"
                 if (tests_exit_code != 0) {
                     currentBuild.result = 'UNSTABLE'
                 }
